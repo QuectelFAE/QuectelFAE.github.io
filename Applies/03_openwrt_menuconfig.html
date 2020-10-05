@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Applications</title>
+<title>03_openwrt_menuconfig.html</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/font-awesome.min.css" rel="stylesheet">
-<script src="css/jquery.min.js"></script>
-<link rel="stylesheet" href="css/index.css">
 <style type="text/css">
+/* GitHub stylesheet for MarkdownPad (http://markdownpad.com) */
+/* Author: Nicolas Hery - http://nicolashery.com */
+/* Version: b13fe65ca28d2e568c6ed5d7f06581183df8f2ff */
+/* Source: https://github.com/nicolahery/markdownpad-github */
 
 /* RESET
 =============================================================================*/
@@ -292,200 +291,35 @@ img {
 </style>
 </head>
 <body>
-
-<div class="mainDiv1">
-<ul id="accordion" class="accordion">
-		<li><div class="link"><i class="fa fa-globe"></i>串口发送AT指令<i class="fa fa-chevron-down"></i></div>
-			<ul class="submenu">
-				<li><a href="Applies/00_AT串口操作.html">串口发送AT指令</a></li>
-			</ul>
-		</li>
-		<li><div class="link"><i class="fa fa-globe"></i>quectel-CM开机自启动<i class="fa fa-chevron-down"></i></div>
-			<ul class="submenu">
-				<li><a href="Applies/01.1_quectel-CM开机自启动.html">quectel-CM添加到systemd</a></li>
-				<li><a href="Applies/01.2_quectel-CM开机自启动.html">OpenWrt add quectel-CM 开机启动</a></li>
-			</ul>
-		</li>
-		<li><div class="link"><i class="fa fa-globe"></i>tyUSB序号的问题<i class="fa fa-chevron-down"></i></div>
-			<ul class="submenu">
-				<li><a href="Applies/02.1_Reset USB Device.html">Reset USB Device</a></li>
-				<li><a href="Applies/02.2_udev规则固定ttyUSB.html">udev规则固定ttyUSB</a></li>
-			</ul>
-		</li>
-		<li><div class="link"><i class="fa fa-globe"></i>NAT的软路由<i class="fa fa-chevron-down"></i></div>
-			<ul class="submenu">
-				<li><a href="Applies/04_基于NAT的软路由.html">NAT的软路由</a></li>
-			</ul>
-		</li>
-		<li><div class="link"><i class="fa fa-globe"></i>openwrt<i class="fa fa-chevron-down"></i></div>
-			<ul class="submenu">
-				<li><a href="Applies/03_openwrt_menuconfig.html">OpenWrt添加menuconfig</a></li>
-			</ul>
-		</li>
-	</ul>
-</div>
-<div class="mainDiv2">
-	
-</div>
-<script type="text/javascript">
-$(function () {
-    var Accordion = function (el, multiple) {
-        this.el = el || {};
-        this.multiple = multiple || false;
-        var links = this.el.find('.link');
-        links.on('click', {
-            el: this.el,
-            multiple: this.multiple
-        }, this.dropdown);
-    };
-    Accordion.prototype.dropdown = function (e) {
-        var $el = e.data.el;
-        $this = $(this), $next = $this.next();
-        $next.slideToggle();
-        $this.parent().toggleClass('open');
-        if (!e.data.multiple) {
-            $el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-        }
-        ;
-    };
-    var accordion = new Accordion($('#accordion'), false);
-});
-</script>
-    </body>
-
-
-<style class="cp-pen-styles">* {
-	margin: 0;
-	padding: 0;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
- 
-body {
-	font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
-}
- 
-ul {
-	list-style-type: none;
-}
- 
-a {
-	color: #b63b4d;
-	text-decoration: none;
-}
- 
-/** =======================
- * Contenedor Principal
- ===========================*/
-h1 {
- 	color: #FFF;
- 	font-size: 24px;
- 	font-weight: 400;
- 	text-align: center;
- 	margin-top: 80px;
- }
- 
-h1 a {
- 	color: #c12c42;
- 	font-size: 16px;
- }
- 
- .accordion {
- 	width: 100%;
- 	max-width: 360px;
- 	margin: 0px auto 20px;
-	padding-left:0px;
- 	background: #FFF;
- 	-webkit-border-radius: 4px;
- 	-moz-border-radius: 4px;
- 	border-radius: 4px;
- }
- 
-.accordion .link {
-	cursor: pointer;
-	display: block;
-	padding: 15px 15px 15px 42px;
-	color: #4D4D4D;
-	font-size: 14px;
-	font-weight: 700;
-	border-bottom: 1px solid #CCC;
-	position: relative;
-	-webkit-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
- 
-.accordion li:last-child .link {
-	border-bottom: 0;
-}
- 
-.accordion li i {
-	position: absolute;
-	top: 16px;
-	left: 12px;
-	font-size: 18px;
-	color: #595959;
-	-webkit-transition: all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
- 
-.accordion li i.fa-chevron-down {
-	right: 12px;
-	left: auto;
-	font-size: 16px;
-}
- 
-.accordion li.open .link {
-	color: #b63b4d;
-}
- 
-.accordion li.open i {
-	color: #b63b4d;
-}
-.accordion li.open i.fa-chevron-down {
-	-webkit-transform: rotate(180deg);
-	-ms-transform: rotate(180deg);
-	-o-transform: rotate(180deg);
-	transform: rotate(180deg);
-}
- 
-.accordion li.default .submenu {display: block;}
-/**
- * Submenu
- -----------------------------*/
- .submenu {
- 	display: none;
- 	background: #444359;
- 	font-size: 14px;
-	padding-left:0px;
- }
- 
- .submenu li {
- 	border-bottom: 1px solid #4b4a5e;
- }
- 
- .submenu a {
- 	display: block;
- 	text-decoration: none;
- 	color: #d9d9d9;
- 	padding: 12px;
- 	padding-left: 42px;
- 	-webkit-transition: all 0.25s ease;
- 	-o-transition: all 0.25s ease;
- 	transition: all 0.25s ease;
- }
- 
- .submenu a:hover {
- 	background: #b63b4d;
- 	color: #FFF;
- }
- }
- }
-
-
+<p>在sdk源码的package目录下创建文件夹quectel，将应用程序的源码和驱动放到quectel目录里，并添加Makefile；在源码根目录下make menuconfig的时候选择对应的工具，最后在源码根目录下的config中可以看到对应选项。</p>
+<p>OpenWrt添加package
+<img src="https://i.loli.net/2020/10/05/YJf3QkZUSEmdwjN.png" alt="openwrt.png" /></p>
+<p>openwrt_sdk/package/quectel/feeds/GobiNet/
+<a href="Applies\openwrt\package\quectel\feeds\GobiNet\Makefile">Makefile</a></p>
 <hr />
+<p>在make menuconfig时，</p>
+<pre><code>Utilities --- &gt;
+    &lt;*&gt;&lt;QFirehose&gt; …………………………..Qfirehose app build test
+    &lt;*&gt;&lt;QLog&gt;…………………………………… QLog app build test
+    &lt;*&gt;&lt;quectel-CM&gt;……………………………quectel-CM app build test
+</code></pre>
+
+<p>编译后最终会生成Qlog可执行文件，并安装到OpenWrt的/usr/bin/目录。</p>
+<p>在make menuconfig的时候，选中pcie_mhi驱动。对应上面提供的Makefile，如下配置</p>
+<pre><code>Kernel modules --- &gt;
+    Network Support --- &gt;
+        &lt;*&gt;kmod-pcie_mhi……………………Quectel Linux PCIE MHI Driver
+</code></pre>
+
+<p>Make menuconfig后可以检查下.config是否添加了</p>
+<pre><code>CONFIG_PACKAGE_quectel-CM=y
+CONFIG_PACKAGE_QFirehose=y
+CONFIG_PACKAGE_QLog=y
+CONFIG_PACKAGE_kmod-pcie_mhi=y
+CONFIG_PACKAGE_kmod-qmi_wwan_q=y
+CONFIG_PACKAGE_kmod-GobiNet=y
+</code></pre>
+
 
 </body>
 </html>
